@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Logs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .logs-container {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .log-entry {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .log-entry p {
+            margin: 0;
+        }
+
+        .rejected {
+            background-color: #ffcccc; /* Red background for rejected orders */
+        }
+
+        .filled {
+            background-color: #ccffcc; /* Green background for filled orders */
+        }
+
+        .footer {
+            text-align: center;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #f8f8f8;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            background-color: #f8f8f8;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Order Logs</h1>
+    </div>
+    <div class="logs-container">
+        {% for log in logs %}
+        <div class="log-entry {% if 'Rejected' in log %}rejected{% elif 'Filled' in log %}filled{% endif %}">
+            <p>{{ log }}</p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="footer">
+        <p>Developed by Programetix</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+11-06-2024 12:40:54 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200905435
+11-06-2024 13:21:17 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200905996
+11-06-2024 14:07:08 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200906546
+11-06-2024 14:11:54 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200906600
+11-06-2024 14:14:29 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200906642
+11-06-2024 14:16:16 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200906664
+11-06-2024 14:16:26 Order for SELL SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200906666
+11-06-2024 20:25:49 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200908159
+11-06-2024 20:33:24 Order for BUY SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200908164
+11-06-2024 20:33:41 Order for SELL SBIN NRML for 1 Quantity is Rejected, Exchange order Id 1200908165

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Authentication Page</title>
+    <style>
+      /* Add custom CSS styles */
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        min-height: 100vh;
+        margin: 20px;
+      }
+      .form-container {
+        margin-bottom: 30px;
+        text-align: left;
+      }
+      .form-container label {
+        margin-right: 10px;
+      }
+      .form-container input,
+      .form-container select {
+        margin-bottom: 10px;
+        width: 100%;
+      }
+      .form-container button[type="submit"] {
+        background-color: blue;
+        color: white;
+        width: 100%;
+      }
+      footer {
+        margin-top: auto;
+        text-align: center;
+      }
+      .flash-messages {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 10px;
+      }
+      .flash-messages li {
+        margin-bottom: 5px;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Authentication</h1>
+    <div class="form-container">
+      <form method="POST" action="/">
+        {{ form.csrf_token }}
+        <h2>XTS Detail</h2>
+        {{ form.userId.label }} {{ form.userId }}<br>
+        {{ form.apiKey.label }} {{ form.apiKey }}<br>
+        {{ form.apiSecret.label }} {{ form.apiSecret }}<br><br>
+        <h2>Algofox Details</h2>
+        {{ form.username.label }} {{ form.username }}<br>
+        {{ form.password.label }} {{ form.password }}<br>
+        {{ form.role.label }}
+        <select name="{{ form.role.name }}" style="width: 100%;">
+          {% for value, label in form.role.choices %}
+            <option value="{{ value }}" {% if form.role.data == value %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class="flash-messages">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <footer>
+      <p>Developed by Programetix</p>
+    </footer>
+  </body>
+</html>
